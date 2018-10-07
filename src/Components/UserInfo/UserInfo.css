@@ -1,0 +1,51 @@
+.button-preFav:hover .button-iconFav,
+.button-preFav .button-iconFaved {
+  display: none;
+}
+.button-preFav:hover .button-iconFaved {
+  display: inline;
+}
+.button-iconFaved {
+  color: #ffbf00;
+}
+.button-preFav,
+.btn-default:hover,
+.btn-default,
+.btn-default:focus {
+  background: none;
+  border: none;
+}
+.userinfo-name {
+  font-size: 35px;
+}
+.userinfo {
+  width: 800px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.userinfo-info {
+  margin-left: 50px
+}
+
+@media screen and ( max-width: 1200px ) {
+  .userinfo-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and ( max-width: 768px ) {
+  .userinfo {
+    width: 300px;
+    display: inline-block;
+  }
+  .userinfo-wraper {
+    text-align: center;
+  }
+  .userinfo-info {
+    margin-left: 25px
+  }
+  
+}

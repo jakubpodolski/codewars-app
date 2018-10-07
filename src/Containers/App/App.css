@@ -1,0 +1,11 @@
+.page-header {
+    border-bottom: none;
+    text-align: center;
+    font-size: inherit;
+}
+
+.status-text {
+    text-align: center;
+    font-size: 20px;
+    color: #a3aebc;
+}
