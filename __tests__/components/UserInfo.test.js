@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import UserInfo from '../../src/Components/UserInfo/UserInfo'
-import ButtonTest from '../../src/Components/Button'
+
 
 
 describe('<UserInfo />', () => {
-    const handleFavClick = () => jest.fn()
+    const mockFn = jest.fn()
     const userInfoProps = {
         user: {
             username: 'caparezza',
@@ -16,7 +16,7 @@ describe('<UserInfo />', () => {
             leaderboardPosition: 1889,           
         },
         favorite: ['qwark97', 'Logan', 'caparezza'],
-        handleFavClick 
+        handleFavClick: mockFn
     }
     const wrapper = shallow(<UserInfo {...userInfoProps} />)
         
@@ -24,14 +24,11 @@ describe('<UserInfo />', () => {
         expect(wrapper.find('Button').childAt(0).hasClass('button-iconFaved')).toEqual(true)
     })
 
-    /*it('test click', () => {
-        const mockCallBack = jest.fn()
+    it('Button exists', () => {        
+        expect(wrapper.find('Button').exists()).toEqual(true)
+    })
+    
+    it('calls mock function when clicked', () => {
         
-        const button = shallow( <ButtonTest props={mockCallBack}/>)
-        button.find('Button').simulate('click')
-
-        expect(mockCallBack.mock.calls.length).toEqual(1)
-        
-
-    })    */
+    })
 })
