@@ -2,6 +2,7 @@ import React from 'react'
 import './SearchBox.css'
 
 import { Form, FormControl, Button, Glyphicon, Grid, Col} from 'react-bootstrap'
+
 const SearchBox = ({searchUser,handleSubmit}) => {
     return (
         <div className='searchbox-div' >
@@ -22,5 +23,3 @@ const SearchBox = ({searchUser,handleSubmit}) => {
 }
 
 export default SearchBox
-
-// [onChange={(event) => searchUser(event)] === [onChange={searchUser

@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
+
 import UserInfo from '../../src/Components/UserInfo/UserInfo'
 
 
@@ -15,11 +16,11 @@ describe('<UserInfo />', () => {
             clan: 'UEK',
             leaderboardPosition: 1889,           
         },
-        favorite: ['qwark97', 'Logan', 'caparezza'],
+        favorite: ['qwark97', 'Logan'],
         handleFavClick: mockFn
     }
     const wrapper = shallow(<UserInfo {...userInfoProps} />)
-        
+    
     it('Allways renders icon', () => {
         expect(wrapper.find('Button').childAt(0).hasClass('button-iconFaved')).toEqual(true)
     })
@@ -29,6 +30,7 @@ describe('<UserInfo />', () => {
     })
     
     it('calls mock function when clicked', () => {
-        
+        wrapper.find('Button').simulate('click')
+        expect(mockFn.mock.calls.length).toEqual(1)
     })
 })
